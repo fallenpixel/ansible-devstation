@@ -1,4 +1,5 @@
 galaxy_info:
+  role_name: "devstation"
   author: Eric Lehmann
   description: Used to download and apply git managed dotfiles and install common packages
 
