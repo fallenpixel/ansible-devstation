@@ -1,3 +1,4 @@
+---
 - name: Install Prerequisites
   ansible.builtin.package:
     name:
