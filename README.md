@@ -1,4 +1,4 @@
-fallenpixel devstation
+fallenpixel.devstation
 =========
 
 An ansible role to automate the installation of commonly used packages and
