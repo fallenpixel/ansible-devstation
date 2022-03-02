@@ -1,16 +1,17 @@
 fallenpixel devstation
 =========
 
-An ansible role to automate the installation of commonly used packages and 
-configuration used by fallenpixel. 
+An ansible role to automate the installation of commonly used packages and
+configuration used by fallenpixel.
 
 Requirements
 ------------
 
-Only ansible.builtin modules are used. 
+Only ansible.builtin modules are used.
 
 Role Variables
 --------------
+
 - dotfiles_repo: "fallenpixel/dotfiles"
   a dotfiles repository managed by GNU stow
 - neovim_version: "0.6.1"
@@ -21,7 +22,6 @@ Role Variables
   will be uninstalled and replaced with neovim's nightly appimage downloaded to
   /usr/local/bin
 
-
 Dependencies
 ------------
 
@@ -30,7 +30,8 @@ No dependencies
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+Including an example of how to use your role (for instance, with variables
+passed in as parameters) is always nice for users too:
 
     - hosts: devstation
       roles:

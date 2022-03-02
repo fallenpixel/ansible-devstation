@@ -5,7 +5,7 @@
       - zsh
       - stow
       - git
-    state: latest
+    state: present
   become: true
 - name: Clone dotfiles
   ansible.builtin.git:
