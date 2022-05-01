@@ -30,7 +30,7 @@
     state: absent
   when: tmux.stat.islink is defined and tmux.stat.islink == "true"
 - name: Create tmux plugins directory
-  ansible.buitlin.file:
+  ansible.builtin.file:
     path: "{{ ansible_env.HOME }}/.tmux/plugins"
     state: directory
 - name: Stow
