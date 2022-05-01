@@ -20,6 +20,19 @@
     path: "{{ ansible_env.HOME }}/.zshrc"
     state: absent
   when: zshrc.stat.islink is defined and zshrc.stat.islnk == "false"
+- name: Check tmux directory
+  ansible.builtin.stat:
+    path: "{{ ansible_env.HOME }}/.tmux"
+  register: tmux
+- name: Remove tmux link
+  ansible.builtin.file:
+    path: "{{ ansible_env.HOME }}/.tmux"
+    state: absent
+  when: tmux.stat.islink is defined and tmux.stat.islink == "true"
+- name: Create tmux plugins directory
+  ansible.buitlin.file:
+    path: "{{ ansible_env.HOME }}/.tmux/plugins"
+    state: directory
 - name: Stow
   ansible.builtin.command:
     cmd: stow "{{ item.package }}"
