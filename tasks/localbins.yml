@@ -1,3 +1,4 @@
+---
 # vim:ft=yaml.ansible ts=2 et
 - name: Install vale
   ansible.builtin.unarchive:
