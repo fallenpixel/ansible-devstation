@@ -7,3 +7,4 @@
     include:
       - "vale"
     dest: /usr/local/bin
+  become: true
