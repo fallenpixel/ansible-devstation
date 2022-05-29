@@ -29,14 +29,11 @@
       become: true
     - name: Download Neovim
       ansible.builtin.get_url:
-        url: "https://github.com/neovim/neovim/releases/download/\
-        v{{ neovim_version }}/nvim.appimage"
-        checksum: "sha256:https://github.com/neovim/neovim/releases/download/\
-        v{{ neovim_version }}/nvim.appimage.sha256sum"
+        url: "https://github.com/neovim/neovim/releases/download/v{{ neovim_version }}/nvim.appimage"
+        checksum: "sha256:https://github.com/neovim/neovim/releases/download/v{{ neovim_version }}/nvim.appimage.sha256sum"
         dest: /usr/local/bin/nvim
         mode: "0755"
         owner: root
         group: root
       become: true
-  when: "neovim_signal.stat.exists == true or \
-  ansible_facts.packages.neovim[0].version < min_neovim_version"
+  when: "neovim_signal.stat.exists == true or ansible_facts.packages.neovim[0].version < min_neovim_version"
