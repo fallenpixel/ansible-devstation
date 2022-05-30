@@ -8,3 +8,6 @@
       - "vale"
     dest: /usr/local/bin
   become: true
+- name: Vale sync
+  ansible.builtin.command:
+    cmd: vale sync
